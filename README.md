@@ -32,7 +32,9 @@ print("D")
 - B
 - C
 - D
-
+```
+A , C, D 
+```
 ***
 ## Question 2
 
@@ -56,6 +58,11 @@ switch appInfo {
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
+```
+myCoolApp hasn't released yet
+Thanks for looking at myCoolApp!
+
+```
 ***
 ## Question 3
 
@@ -74,12 +81,9 @@ default:
  print("D")
 }
 ```
-
-- A
-- B
-- C
-- D
-
+D
+```
+```
 ***
 ## Question 4
 
@@ -102,7 +106,10 @@ case "snickers":
 - No opening and closing brackets in each of the cases
 - No default case in the switch statement
 - No print statement right outside the switch statement
+```
+- No default case in the switch statement
 
+```
 ***
 ## Question 5
 
@@ -113,7 +120,21 @@ let currentWeather = "rain"
 
 // enter code below
 ```
+```
+let currentWeather = "rain"
 
+switch currentWeather {
+case "rain":
+ print("don't forget your umbrella")
+case "sunny":
+ print("don't forget your sunscreen for this sunny day")
+case "snow":
+ print("it's snowing so it's time for hot chocolate")
+
+Default: 
+Print("either way you're alive so enjoy the weather today")
+}
+```
 ***
 ## Question 6
 
@@ -124,6 +145,10 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+```
+```
+var fullName = "\(firstName) \(lastName)"
+print(fullName)
 ```
 
 ***
@@ -144,6 +169,17 @@ if temperatureInFahrenheit <= 40 {
 //Re-written statement here
 
 ```
+```
+Switch temperatureInFahrenheit{
+Case  40:
+Print ("it's cold out")
+Case 80:
+Print("it's really warm")
+Default:
+("Weather is moderate")
+}
+
+```
 
 ***
 
@@ -158,6 +194,16 @@ if {
 else {
  print("You lose!")
 }
+```
+```
+let testScore = 90
+if testScore == 90 {
+ print("You win!")
+}
+else {
+ print("You lose!")
+}
+
 ```
 ***
 
@@ -185,6 +231,32 @@ Output:
 Error
 
 ```
+```
+var numberOfSides = 4
+
+switch numberOfSides {
+case 3:
+    print("triangle")
+    case 4:
+    print("Square")
+    case 5:
+    print("pentagon")
+    case 6:
+    print("hexagon")
+    case 7:
+    print("heptagon")
+    case 8:
+    print("octagon")
+    case 9:
+    print("nonagon")
+    case 10:
+    print("decagon")
+default:
+    print("Error")
+}
+
+```
+
 ***
 
 ## Question 10
@@ -200,9 +272,29 @@ Numeric Score 	Letter Grade
 65 - 69 	D
 Below 65 	F
 ```
+```
+var yourScore = 95
+switch yourScore  {
+case 100:
+    print("A+")
+case 90..<99:
+    print("B")
+case 88..<89:
+    print("B")
+case 70..<79 :
+    print("C")
+case 65..<69 :
+    print("D")
+case ..<65 :
+    print("F")
+default:
+    print("Error")
+}
+
+```
 ***
 
-## Question 11
+## Question 11 (!!!)
 
 What is wrong with the block of code below?  Correct it so it behaves as expected.
 
@@ -214,16 +306,49 @@ if firstName == "Peter" {
 } else if firstName == "Phil" {
  let lastName = "Collins"
 }
+let fullName = (firstName + " " + lastName)
+```
+```
+let firstName = "Peter"
+ var lastName = ""
+
+if firstName == "Peter" {
+  lastName = "Gabriel"
+} else if firstName == "Phil" {
+  lastName = "Collins"
+}
 let fullName = firstName + " " + lastName
 ```
 ***
 
-## Question 12
+## Question 12 (work on if else statments)
 
 Write an if statement that prints out what decade of life someone is in (e.g "You are in your twenties). Then, write it as a switch statement.
 
 ```swift
 let nameAndBirthYear: (String, Int)
+
+```
+```
+var birthYear = 1997
+
+if birthYear 1990..<2000{
+print ("You are in your twenties")
+}
+if birthYear 2001-2019 {
+print("You are in your teens")
+}
+
+switch birthYear
+case 1990..<2000 :
+    print("You are in your twenties")
+    case 2000..<2019 :
+    print("You are in your teens")
+default:
+    print("Error")
+}
+
+
 
 ```
 ***
@@ -258,6 +383,19 @@ What happens when you change number to:
 
 What happens when you remove the default clause?
 
+```
+The first thing this would print is :The answer to life, the universe and everything
+
+second thing is: Days in year
+
+third thing is: Bytes in a Kilobyte
+
+fourth thing is :
+Some uninteresting number
+
+when the default clause is removed the file complies and it is not exhausted 
+```
+
 ***
 
 
@@ -277,6 +415,17 @@ var message = String()
 
 if population > 10000 {
  message = "\(population) is a large town"
+} else if 
+```
+```
+var population = 6000
+
+if population > 10000 {
+ print("\(population) is a large town")
+} else if 5_000 ..< 10_000 {
+ print("a medium size town")
+ } else {
+ print("Its a mid-size town")
 }
 ```
 ***
@@ -289,7 +438,26 @@ a. Using a conditional
 
 b. Using a switch statement
 
-```swift
+```swifts
 let myTuple: (Int, Int) = (5, 10)
+```
+```
+A.
+if my myTuple <= 15 {
+print("The sum of the two number in the tuple is at least 15")
+} else {
+print("Try again")
+}
+
+B.
+let myTuple = 10 + 5
+switch myTuple
+{
+case myTuple <= 15 
+ print("The sum of the numbers is at least 15")
+ default:
+ print("Try again")
+}
+
 ```
 ***
